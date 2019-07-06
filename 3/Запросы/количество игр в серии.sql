@@ -1,0 +1,1 @@
+select series.s_name, count(*) from game inner join series on game.i_series_id = series.id where i_publisher_id in (select id from publisher where publisher.s_name = 'valve') group by game.i_series_id;

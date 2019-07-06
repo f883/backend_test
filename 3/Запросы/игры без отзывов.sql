@@ -1,0 +1,1 @@
+select id, s_name, d_published_date from game where (select count(*) from review where (i_game_id = game.id)) = 0; # игры, на которые ещё нет отзывов
